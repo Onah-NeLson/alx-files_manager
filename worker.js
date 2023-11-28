@@ -24,6 +24,7 @@ fileQueue.process(async (job, done) => {
     done(new Error('Missing userId'));
   }
 
+
   console.log(fileId, userId);
   const files = dbClient.db.collection('files');
   const idObject = new ObjectID(fileId);
